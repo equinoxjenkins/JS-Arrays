@@ -139,6 +139,10 @@ function finder () {
 var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
+
+function reverse () {
+  return str.split("").reverse().join("");
+}
   //Code Here
 
 
@@ -163,10 +167,30 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
+  function removeItem(myGroceryList, itemToRemove) {
+      for (var i = 0; i < myGroceryList.length; i++) {
+        if (itemToRemove === myGroceryList[i]) {
+          myGroceryList.splice(i, 1);
+        }
+      }
+      return myGroceryList;
+    }
+
+    removeItem(myGroceryList, 'chips');
+
+
+
+
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
+function addItem (myGroceryList, itemToAdd) {
+  myGroceryList.push(itemToAdd);
+  return myGroceryList;
+}
 
+
+addItem(myGroceryList, 'salad')
 
 //Next Problem
 
